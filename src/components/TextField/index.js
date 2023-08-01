@@ -1,9 +1,17 @@
 import './TextField.css'
-const TextField = ()=>{
+
+
+const TextField = (props)=>{
+
+
+    const onDigit = (event) =>{
+       props.onChange(event.target.value)
+    }
+
     return (
         <div className="text-field">
-            <label>Nome</label>
-            <input placeholder='Digite seu nome' /> 
+            <label>{props.label}</label>
+            <input value={props.value} onChange={onDigit} required={props.required} placeholder= {props.placeholder} /> 
         </div>
     )
 }
