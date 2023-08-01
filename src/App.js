@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Form from './components/Form';
 import Banner from './components/banner/Banner.js';
 import Team from './components/Team';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -62,6 +63,7 @@ function App() {
       corSecundaria={team.corSecundaria}
       employees={employees.filter(employee => employee.team == team.nome)} 
       />)}
+      <Footer />
     </div>
   );
 }

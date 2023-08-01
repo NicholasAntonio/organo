@@ -1,0 +1,25 @@
+.footer{
+    background-color: #6278F7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 233px;
+}
+
+.icons{
+    display: flex;
+    gap: 48px;
+}
+
+.icons img{
+    width: 24px;
+}
+
+.logo img{
+    width: 124px;
+}
+
+.footer:last-child{
+    color: #fff;
+    font-size: 24px;
+}
