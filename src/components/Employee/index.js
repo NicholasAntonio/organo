@@ -1,14 +1,16 @@
 import './employee.css'
 
-const Employee = (props) => {
+const Employee = ({nome,imagem,cargo,corDeFundo}) => {
     return(
         <div className='employee'>
-            <div className='header'>
-                <img src={props.imagem} alt={props.nome}/>
+            <div className='header' style={{
+               backgroundColor: corDeFundo
+            }}>
+                <img src={imagem} alt={nome}/>
             </div>
             <div className='footer'>
-                <h4>{props.nome}</h4>
-                <h5>{props.cargo}</h5>
+                <h4>{nome}</h4>
+                <h5>{cargo}</h5>
             </div>
         </div>
     )

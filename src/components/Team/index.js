@@ -17,7 +17,7 @@ const Team = (props) => {
         {props.nome}
       </h3>
       <div className="employees">
-        {props.employees.map(employee => <Employee nome={employee.nome} cargo={employee.cargo} imagem={employee.imagem} />)}
+        {props.employees.map(employee => <Employee key={employee.nome} nome={employee.nome} cargo={employee.cargo} imagem={employee.imagem} corDeFundo={props.corPrimaria} />)}
         </div>
     </section>
     : ''
