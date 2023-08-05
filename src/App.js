@@ -1,26 +1,25 @@
 import { useState } from 'react';
-import Form from './components/Form';
-import Banner from './components/banner/Banner.js';
-import Team from './components/Team';
-import Footer from './components/Footer';
+import Banner from './componentes/Banner/Banner.js';
+import Formulario from './componentes/Formulario';
+import Time from './componentes/Time';
+import Rodape from './componentes/Rodape/index.js';
 
 function App() {
 
-
-  const teams = [
+  const times = [
     {
       nome: 'Programação',
       corPrimaria: '#57C278',
       corSecundaria: '#D9F7E9'
     },
     {
-      nome: 'Front-end',
+      nome: 'Front-End',
       corPrimaria: '#82CFFA',
       corSecundaria: '#E8F8FF'
     },
     {
       nome: 'Data Science',
-      corPrimaria: '#AED157',
+      corPrimaria: '#A6D157',
       corSecundaria: '#F0F8E2'
     },
     {
@@ -45,28 +44,28 @@ function App() {
     }
   ]
 
+  const [colaboradores, setColaboradores] = useState([])
 
-  const [employees, setEmployees] = useState([]);
-
-  const onNewEmployeeAdded = (employee)=>{
-    console.log(employee);
-    setEmployees([...employees, employee])
+  const aoNovoColaboradorAdicionado = (colaborador) => {
+    debugger
+    setColaboradores([...colaboradores, colaborador])
   }
+
   return (
     <div className="App">
       <Banner />
-      <Form teams={teams.map(team => team.nome)} onRegisteredEmployee={employee => onNewEmployeeAdded(employee)}/>
-      {teams.map(team=> <Team  
-      key={team.nome} 
-      nome={team.nome}   
-      corPrimaria={team.corPrimaria} 
-      corSecundaria={team.corSecundaria}
-      employees={employees.filter(employee => employee.team == team.nome)} 
-      />)}
-      <Footer />
+      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+
+      {times.map(time => <Time 
+        key={time.nome} 
+        nome={time.nome} 
+        corPrimaria={time.corPrimaria} 
+        corSecundaria={time.corSecundaria} 
+        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+      />)}   
+      <Rodape />
     </div>
   );
 }
 
 export default App;
-

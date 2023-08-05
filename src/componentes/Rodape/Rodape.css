@@ -1,4 +1,4 @@
-.footer{
+.rodape{
     background-color: #6278F7;
     display: flex;
     justify-content: space-around;
@@ -6,12 +6,12 @@
     height: 233px;
 }
 
-.icons{
+.icones{
     display: flex;
     gap: 48px;
 }
 
-.icons img{
+.icones img{
     width: 24px;
 }
 
@@ -19,7 +19,7 @@
     width: 124px;
 }
 
-.footer:last-child{
+.rodape:last-child{
     color: #fff;
     font-size: 24px;
 }
