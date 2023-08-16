@@ -1,25 +1,17 @@
-.rodape{
-    background-color: #6278F7;
+.footer {
+    background: #6278F7;
+    color: #FFF;
+    padding: 80px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 233px;
 }
 
-.icones{
-    display: flex;
-    gap: 48px;
+.footer ul li {
+    display: inline-block;
+    margin-right: 32px;
 }
 
-.icones img{
-    width: 24px;
-}
-
-.logo img{
-    width: 124px;
-}
-
-.rodape:last-child{
-    color: #fff;
-    font-size: 24px;
+.footer ul li:last-child {
+    margin-right: 0;
 }
