@@ -3,7 +3,7 @@ import {BsFillTrashFill} from 'react-icons/bs'
 
 const Colaborador = ({ colaborador, corDeFundo, aoDeletar }) => {
     return (<div className="colaborador">
-        <BsFillTrashFill size={25}className='deletar' onClick={aoDeletar}></BsFillTrashFill>
+        <BsFillTrashFill size={25} className='deletar' onClick={()=> aoDeletar(colaborador.id)}></BsFillTrashFill>
         <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
             <img src={colaborador.imagem} alt={colaborador.nome} />
         </div>
